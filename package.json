@@ -1,5 +1,5 @@
 {
-  "name": "project4-starter-code",
+  "name": "shoe-market-api-express",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -20,6 +20,7 @@
     "method-override": "^3.0.0",
     "pg": "^8.3.0",
     "sequelize": "^6.3.3",
-    "sequelize-cli": "^6.2.0"
+    "sequelize-cli": "^6.2.0",
+    "sneaks-api": "^1.1.1"
   }
 }
