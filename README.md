@@ -1,75 +1,52 @@
-## Deere Project 4 Starter Code
+# Kickz-R-Us
+## Description 
+An express backend database to store SignUp and product information. There is a one to many relationship between user and shoes. After sign up, user will have ability to add products to database and each shoe in database will store userId which acts as foreign key. 
 
-This app serves JSON data only. There are no views. You'll build a React app to communicate with this Express app. Since there are no views, you'll want to use Postman to test that your endpoints are working before writing the React code.
+# Deployed Application 
 
-Note - this app has no views and each endpoint is prefaced with `/api`.
+# Screenshots
+## ERD
+* User will have ability to sign up and information will store in database. After sign up, User will have ability to post shoes to profile and this information will post to database along with foreign key of userId to each shoe.
+![ERD](https://i.imgur.com/BwJx4pH.png) <br>
+* PostGres SQL 
+![Database](https://i.imgur.com/fcSbYZh.png) <br>
 
-```js
-// server.js
-app.use("/api/auth", require("./controllers/authController.js"));
-app.use("/api/users", require("./controllers/usersController.js"));
-```
+# Routes 
+### Get all Shoes
+* GET - localhost:3000/api/shoes
+#### Get a Shoe
+* GET - localhost:3000/api/shoes/1
+### Update a Shoe
+* PUT - localhost:3000/api/shoes/1
+### Create a Shoe
+* POST - localhost:3000/api/shoes
+### Delete a User Shoe
+* DEL - localhost:3000/api/shoes/2
+### Sign Up
+* POST - localhost:3000/api/auth/signup
+### Login
+* POST - localhost:3000/api/auth/login
+### Get User
+* GET - localhost:3000/api/users/profile/4
+### Get All Users
+* GET - localhost:3000/api/users
+### Delete User
+* DEL - localhost:3000/api/users/1
+### Update User
+* PUT - localhost:3000/api/users/2
 
-## Set Up
 
-1. Fork and clone this repo
-1. `cd` into the folder and run `npm install`
-1. In the root of your app, `touch .env` and add:
 
-   ```bash
-   PORT=3000
-   JWT_SECRET=pancakes
-   ```
+# Technology Used
+* CSS5 <br>
+* ES6 <br>
+* HTML5 <br>
+* NPX <br>
+* NPM <br>
 
-1. Check out your `config/config.json` file. You'll need to create a database called `project4_development` (or feel free to rename the database) in pgAdmin or from any directory in the Terminal:
+# Installation 
+* None needed to use
 
-   ```
-   createdb project4_development
-   ```
-
-1. Sequelize is included in the app. You have a `User` model. Run `npx sequelize db:migrate` to create the `Users` table in your database.
-
-1. Run `nodemon`.
-1. Open Postman to confirm that your app is working on `localhost:3000/`.
-
-![](https://i.imgur.com/VEkRBk9.png)
-
-<br>
-
-## Routes
-
-You have the following routes available.
-
-#### `server.js`
-
-- GET `localhost:3000/`
-
-#### `controllers/authController.js`
-
-- POST `localhost:3000/api/auth/signup`
-- POST `localhost:3000/api/auth/login`
-- GET `localhost:3000/api/auth/logout`
-
-#### `controllers/usersController.js`
-
-- GET `localhost:3000/api/users/profile/:id`
-
-<br>
-
-## To Deploy
-
-- [Heroku Node Express Deployment](https://git.generalassemb.ly/jdr-0622/node-express-heroku-deployment)
-- [Heroku React Deployment](https://blog.heroku.com/deploying-react-with-zero-configuration#create-and-deploy-a-react-app-in-two-minutes)
-- [Project 4 Starter Code Heroku Deployment Link](https://deere-project4-express.herokuapp.com/)
-
-  ![](https://i.imgur.com/hy2jymA.png)
-
-<br>
-
-## Additional Resources
-
-- [Sequelize Docs](https://sequelize.org/master/)
-- [Fruit App Solution](https://git.generalassemb.ly/jdr-0622/fruit-app-in-class)
-- [Pokemon Express Solution](https://git.generalassemb.ly/jdr-0622/pokemon-express-sequelize6)
-- [Google Routes Spreadsheet](https://docs.google.com/spreadsheets/d/14-LHKXLtEkp_vKEz3qSKjREnrmSyzQ9fimTlmrPsZsQ/edit#gid=0)
-- [JSON Web Tokens](https://jwt.io/)
+# Future Plans 
+* Add user watchlist to database
+* Integration of MongoDb. Grabbing data from one api transferring to next.

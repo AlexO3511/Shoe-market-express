@@ -2,10 +2,13 @@ const express = require("express");
 const router = express.Router();
 
 const UserModel = require("../models").User;
-
+const ShoeModel = require("../models").Shoe;
 // GET USERS PROFILE
 router.get("/profile/:id", async (req, res) => {
-  let user = await UserModel.findByPk(req.params.id);
+  let user = await UserModel.findByPk(
+    req.params.id,
+    {include: ShoeModel}
+    );
   res.json({ user });
 });
 

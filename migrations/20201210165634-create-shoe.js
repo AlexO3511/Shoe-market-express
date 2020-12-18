@@ -14,6 +14,9 @@ module.exports = {
       make: {
         type: Sequelize.STRING
       },
+      size: {
+        type: Sequelize.INTEGER
+      },
       colorway: {
         type: Sequelize.STRING
       },

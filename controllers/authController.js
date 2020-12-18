@@ -68,8 +68,8 @@ router.post("/login", (req, res) => {
             }
           );
           console.log(token);
-          // res.cookie("jwt", token); // SEND A NEW COOKIE TO THE BROWSER TO STORE TOKEN
-          // res.redirect(`/users/profile/${foundUser.id}`);
+          res.cookie("jwt", token); // SEND A NEW COOKIE TO THE BROWSER TO STORE TOKEN
+          //res.redirect(`/users/profile/${foundUser.id}`);
           res.json({ token });
         } else {
           return res.sendStatus(400);

@@ -6,7 +6,7 @@ const UserModel = require("../models").User;
 
 // GET ALL Shoes
 router.get("/", async (req, res) => {
-    let allShoes = await ShoeModel.findAll();
+    let allShoes = await ShoeModel.findAll({include: UserModel});
     res.json({ allShoes });
   });
 
